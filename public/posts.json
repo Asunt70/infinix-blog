@@ -2,21 +2,29 @@
   {
     "id": "1",
     "title": "Understanding JavaScript Closures",
-    "description": "JavaScript closures are a fundamental concept in the language. A closure is a function that remembers its lexical scope even when the function is executed outside that lexical scope."
+    "description": "JavaScript closures are a fundamental concept in the language. A closure is a function that remembers its lexical scope even when the function is executed outside that lexical scope.",
+    "image": "test.jpg",
+    "url": "/blogs/javascript_problems"
   },
   {
     "id": "2",
     "title": "A Guide to Responsive Web Design",
-    "description": "Responsive web design is essential in today's multi-device world. It ensures that your website looks good on all devices, from desktops to smartphones."
+    "description": "Responsive web design is essential in today's multi-device world. It ensures that your website looks good on all devices, from desktops to smartphones.",
+    "image": "test.jpg",
+    "url": "/blogs/javascript_problems"
   },
   {
     "id": "3",
     "title": "Introduction to React Hooks",
-    "description": "React Hooks provide a new way to work with state and lifecycle methods in functional components. This guide covers useState and useEffect, the most commonly used hooks."
+    "description": "React Hooks provide a new way to work with state and lifecycle methods in functional components. This guide covers useState and useEffect, the most commonly used hooks.",
+    "image": "test.jpg",
+    "url": "/blogs/javascript_problems"
   },
   {
     "id": "4",
     "title": "Mastering CSS Grid Layout",
-    "description": "CSS Grid Layout is a powerful tool for creating complex, responsive layouts with minimal code. This tutorial covers the basics of grid containers and grid items."
+    "description": "CSS Grid Layout is a powerful tool for creating complex, responsive layouts with minimal code. This tutorial covers the basics of grid containers and grid items.",
+    "image": "test.jpg",
+    "url": "/blogs/javascript_problems"
   }
 ]

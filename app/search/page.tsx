@@ -2,49 +2,19 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Navbar from "../components/NavBar";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 interface BlogPost {
   id: string;
   title: string;
   description: string;
-  // image: string;
-  // url: string;
+  image: string;
+  url: string;
 }
 
-// function BlogPostCard({ blogPost }: { blogPost: BlogPost }) {
-//   return (
-//     <div className="card">
-//       <img src={blogPost.image} alt={blogPost.title} />
-//       <div className="card-body">
-//         <h2>{blogPost.title}</h2>
-//         <p>{blogPost.description}</p>
-//         <a href={blogPost.url}>Read More</a>
-//       </div>
-//     </div>
-//   );
-// }
-
-// function BlogPosts() {
-//   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
-
-//   useEffect(() => {
-//     fetch("https://jsonplaceholder.typicode.com/posts")
-//       .then((response) => response.json())
-//       .then((data) => {
-//         setBlogPosts(data);
-//       });
-//   }, []);
-
-//   return (
-//     <div className="blog-posts">
-//       {blogPosts.map((blogPost) => (
-//         <BlogPostCard key={blogPost.id} blogPost={blogPost} />
-//       ))}
-//     </div>
-// }
-
 export default function SearchResults() {
+  // Logic
   const searchParams = useSearchParams();
   const query = searchParams.get("q") || "";
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
@@ -58,7 +28,9 @@ export default function SearchResults() {
           post.title.toLowerCase().includes((query as string).toLowerCase()) ||
           post.description
             .toLowerCase()
-            .includes((query as string).toLowerCase()),
+            .includes((query as string).toLowerCase()) ||
+          post.url.toLowerCase().includes((query as string).toLowerCase()) ||
+          post.image.toLowerCase().includes((query as string).toLowerCase()),
       );
       setFilteredPosts(results);
     };
@@ -68,16 +40,27 @@ export default function SearchResults() {
     }
   }, [query]);
 
+  //Content
+
   return (
     <>
       <Navbar />
       <div className={styles.pageContainer}>
-        <h1>Search Results for &quot;{query}&quot;</h1>
+        <h1 className={styles.heading}>
+          Search Results for{" "}
+          <span className={styles.searchQuery}>&quot;{query}&quot;</span>
+        </h1>
         <ul className={styles.searchList}>
           {filteredPosts.length > 0 ? (
             filteredPosts.map((post) => (
               <li key={post.id} className={styles.searchResult}>
-                <h3>{post.title}</h3>
+                <Link href={post.url}>
+                  <div className={styles.card}>
+                    <img src={post.image} alt={post.title} />
+                    <h2>{post.title}</h2>
+                    <p>{post.description}</p>
+                  </div>
+                </Link>
               </li>
             ))
           ) : (
