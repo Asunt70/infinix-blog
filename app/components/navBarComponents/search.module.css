@@ -1,0 +1,32 @@
+.search {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    border: 1px solid var(--accent-2);
+    border-radius: 0.75rem;
+    width: 15rem;
+    justify-self: center;
+}
+
+.search:focus {
+    cursor: pointer;
+}
+
+.search input {
+    all: unset;
+    width: 100%;
+    padding-left: 0.5rem;
+}
+
+.buttonContainer {
+    padding: 0.15rem 0.3rem;
+    border-left: 1px solid var(--accent-2);
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    all: unset;
+    cursor: pointer;
+}
