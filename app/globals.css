@@ -4,11 +4,12 @@
     --accent-1: #1b1e1f;
     --accent-2: rgb(128, 119, 105);
     --accent-3: rgb(52, 56, 58);
+    --highlight-1: #0058af;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #0a0a0a;
+        --background: #0b0b0b0b;
         --foreground: #ededed;
     }
 }

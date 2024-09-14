@@ -4,6 +4,7 @@ import { useSearchParams } from "next/navigation";
 import Navbar from "../components/NavBar";
 import Link from "next/link";
 import styles from "./page.module.css";
+import Image from "next/image";
 
 interface BlogPost {
   id: string;
@@ -48,7 +49,7 @@ export default function SearchResults() {
       <div className={styles.pageContainer}>
         <h1 className={styles.heading}>
           Search Results for{" "}
-          <span className={styles.searchQuery}>&quot;{query}&quot;</span>
+          <span className={styles.searchQuery}>&quot;{query}&quot;</span>:
         </h1>
         <ul className={styles.searchList}>
           {filteredPosts.length > 0 ? (
@@ -56,9 +57,19 @@ export default function SearchResults() {
               <li key={post.id} className={styles.searchResult}>
                 <Link href={post.url}>
                   <div className={styles.card}>
-                    <img src={post.image} alt={post.title} />
-                    <h2>{post.title}</h2>
-                    <p>{post.description}</p>
+                    <div className={styles.textContainer}>
+                      <h2>{post.title}</h2>
+                      <p>{post.description}</p>
+                    </div>
+                    <div className={styles.imageContainer}>
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        width={90}
+                        height={60}
+                        className={styles.cardImage}
+                      />
+                    </div>
                   </div>
                 </Link>
               </li>
@@ -67,6 +78,21 @@ export default function SearchResults() {
             <li>No results found.</li>
           )}
         </ul>
+        <Link href="/" className={styles.backToHome}>
+          Back To Home{" "}
+          <span className={styles.arrowContainer}>
+            <svg
+              className="arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+            </svg>
+          </span>
+        </Link>
       </div>
     </>
   );
