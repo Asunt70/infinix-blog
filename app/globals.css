@@ -4,8 +4,8 @@
     --accent-1: #1b1e1f;
     --accent-2: rgb(128, 119, 105);
     --accent-3: rgb(52, 56, 58);
-    --highlight-1: hsl(210, 100%, 34%);
-    --highlight-2:  hsl(208, 100%, 34%);
+    --highlight-1: #0057ad;
+    --highlight-2: hsl(208, 100%, 34%);
 }
 
 @media (prefers-color-scheme: dark) {

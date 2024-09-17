@@ -1,0 +1,13 @@
+.author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.imgAuthor {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: url("/test.jpg") no-repeat center center/cover;
+}

@@ -60,7 +60,7 @@ export default function Home() {
             width="26px"
             height="26px"
             viewBox="0 0 24 24"
-            fill="#ffffff"
+            fill="#0057ad"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path

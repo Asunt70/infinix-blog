@@ -1,10 +1,14 @@
 import styles from "./blogTemplate.module.css";
+import Navbar from "../NavBar";
+import { ReactNode } from 'react';
 
-interface BlogProps {
-  img: string;
-  heading: string;
-}
-
-export default function Blog() {
-  return <></>;
+export default function Blog({ children }: { children: ReactNode }) {
+  return (
+    <>
+      <Navbar />
+      <main className={styles.pageContent}>
+        <div className={styles.post}>{children}</div>
+      </main>
+    </>
+  );
 }
