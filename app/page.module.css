@@ -1,9 +1,67 @@
 .pageContainer {
     margin-top: 4.5rem;
-    padding: 2rem;
+    padding: 1.5rem;
+}
+
+.content {
+    display: flex;
+    gap: 1rem;
 }
 
 .heading {
     display: flex;
     gap: 0.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.blogs {
+    width: 100%;
+}
+
+.postList {
+    width: 100%;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.filterButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    overflow-x: none;
+}
+
+.filterButtons button {
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: none;
+    background-color: #333;
+    color: #e8eaed;
+    cursor: pointer;
+    transition: background-color 100ms ease-in-out;
+}
+
+.filterButtons button:hover {
+    background-color: var(--highlight-2);
+}
+
+.filterButtons .activeButton {
+    background-color: var(--highlight-1);
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
 }

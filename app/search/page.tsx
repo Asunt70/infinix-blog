@@ -2,9 +2,9 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Navbar from "../components/NavBar";
+import Card from "../components/card";
 import Link from "next/link";
 import styles from "./page.module.css";
-import Image from "next/image";
 
 interface BlogPost {
   id: string;
@@ -55,23 +55,13 @@ export default function SearchResults() {
           {filteredPosts.length > 0 ? (
             filteredPosts.map((post) => (
               <li key={post.id} className={styles.searchResult}>
-                <Link href={post.url}>
-                  <div className={styles.card}>
-                    <div className={styles.textContainer}>
-                      <h2>{post.title}</h2>
-                      <p>{post.description}</p>
-                    </div>
-                    <div className={styles.imageContainer}>
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        width={90}
-                        height={60}
-                        className={styles.cardImage}
-                      />
-                    </div>
-                  </div>
-                </Link>
+                <Card
+                  title={post.title}
+                  description={post.description}
+                  imageSrc={post.image}
+                  imageAlt={post.title}
+                  url={post.url}
+                />
               </li>
             ))
           ) : (

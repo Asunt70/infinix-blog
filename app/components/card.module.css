@@ -1,0 +1,26 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0.6rem 0.6rem 1.5rem 0.6rem;
+    border-bottom: 1px solid var(--accent-2);
+    margin-bottom: 1.5rem;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media screen and (max-width: 500px) {
+    .card {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.4rem 1.5rem 0.4rem;
+        gap: 1.5rem;
+    }
+    .textContainer {
+        flex-wrap: wrap;
+    }
+}
