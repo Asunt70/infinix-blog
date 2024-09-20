@@ -3,10 +3,6 @@
     padding: 2rem;
 }
 
-.heading {
-    /* color: var(--accent-1); */
-}
-
 .searchQuery {
     color: var(--highlight-1);
 }
@@ -14,9 +10,6 @@
 .searchList {
     width: 100%;
     margin-top: 3rem;
-}
-
-.searchResult {
 }
 
 .card {
