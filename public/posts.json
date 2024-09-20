@@ -3,8 +3,8 @@
     "id": "1",
     "title": "Understanding JavaScript Closures",
     "description": "JavaScript closures are a fundamental concept in the language.",
-    "image": "/test.jpg",
-    "url": "/blogs/javascript_problems",
+    "image": "/closure.webp",
+    "url": "/blogs/javascript-closures",
     "category": "JavaScript",
     "date": "2024-07-11"
   },
@@ -12,8 +12,8 @@
     "id": "2",
     "title": "A Guide to Responsive Web Design",
     "description": "Responsive web design is essential in today's multi-device world.",
-    "image": "/test.jpg",
-    "url": "/blogs/javascript_problems",
+    "image": "/responsive.webp",
+    "url": "/blogs/responsive-design",
     "category": "CSS",
     "date": "2024-07-14"
   },
@@ -21,8 +21,8 @@
     "id": "3",
     "title": "Introduction to React Hooks",
     "description": "React Hooks provide a new way to work with state and lifecycle methods in functional components.",
-    "image": "/test.jpg",
-    "url": "/blogs/javascript_problems",
+    "image": "/react.webp",
+    "url": "/blogs/react-hooks",
     "category": "React",
     "date": "2024-07-9"
   },
@@ -30,8 +30,8 @@
     "id": "4",
     "title": "Mastering CSS Grid Layout",
     "description": "CSS Grid Layout is a powerful tool for creating complex, responsive layouts with minimal code.",
-    "image": "/test.jpg",
-    "url": "/blogs/javascript_problems",
+    "image": "/css-grid.webp",
+    "url": "/blogs/mastering-css-grid-layout",
     "category": "CSS",
     "date": "2024-07-20"
   }

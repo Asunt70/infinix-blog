@@ -1,0 +1,5 @@
+import styles from "./page.module.css";
+import Blog from "@/app/components/blogTemplate/blogTemplate";
+import Presentation from "@/app/components/blogComponents/Presentation";
+import Heading from "@/app/components/blogComponents/heading";
+import Paragraph from "@/app/components/blogComponents/paragraph";

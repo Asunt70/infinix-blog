@@ -1,10 +1,11 @@
 import styles from "./NavBar.module.css";
 import Link from "next/link";
 import Search from "./navBarComponents/search";
-
+import Logo from "./logo";
 export default function Navbar() {
   return (
     <div className={styles.navBar}>
+      <div className={styles.logo}></div>
       <div className={styles.exploreContainer}>
         <Link href="/" className={styles.explore}>
           <svg
