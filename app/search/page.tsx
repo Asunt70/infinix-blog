@@ -41,7 +41,7 @@ export default function SearchResults() {
     }
   }, [query]);
 
-  //Content
+  //Contents
 
   return (
     <>
