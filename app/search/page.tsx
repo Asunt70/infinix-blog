@@ -1,5 +1,6 @@
 "use client";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense } from "react";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Navbar from "../components/NavBar";
 import Card from "../components/card";
@@ -45,8 +46,8 @@ export default function SearchResults() {
 
   return (
     <>
-      <Suspense>
-        <Navbar />
+      <Navbar />
+      <Suspense fallback={<div>Loading...</div>}>
         <div className={styles.pageContainer}>
           <h1 className={styles.heading}>
             Search Results for{" "}
