@@ -1,5 +1,15 @@
-import styles from "./page.module.css";
-import Blog from "@/app/components/blogTemplate/blogTemplate";
-import Presentation from "@/app/components/blogComponents/Presentation";
-import Heading from "@/app/components/blogComponents/heading";
-import Paragraph from "@/app/components/blogComponents/paragraph";
+.list ul {
+    list-style: disc;
+    padding-left: 1rem;
+}
+
+.list li {
+    margin-bottom: 0.5rem;
+}
+
+.image {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
