@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import Navbar from "../components/NavBar";
+
 import Card from "../components/card";
 import Link from "next/link";
 import styles from "./page.module.css";
@@ -16,7 +16,7 @@ interface BlogPost {
 
 export default function SearchResults() {
   const searchParams = useSearchParams();
-  const query = searchParams.get("q") || "";
+  const query = searchParams?.get("q") || "";
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
 
   useEffect(() => {
@@ -42,7 +42,6 @@ export default function SearchResults() {
 
   return (
     <>
-      <Navbar />
       <Suspense fallback={<div>Loading...</div>}>
         <div className={styles.pageContainer}>
           <h1 className={styles.heading}>
