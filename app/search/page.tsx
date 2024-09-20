@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Navbar from "../components/NavBar";
 import Card from "../components/card";
@@ -47,6 +47,7 @@ export default function SearchResults() {
     <>
       <Navbar />
       <div className={styles.pageContainer}>
+        <Suspense>
         <h1 className={styles.heading}>
           Search Results for{" "}
           <span className={styles.searchQuery}>&quot;{query}&quot;</span>:
@@ -68,6 +69,7 @@ export default function SearchResults() {
             <li>No results found.</li>
           )}
         </ul>
+        </Suspense>
         <Link href="/" className={styles.backToHome}>
           Back To Home{" "}
           <span className={styles.arrowContainer}>
