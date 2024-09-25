@@ -8,7 +8,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Infinix Blog",
-  description: "Coolest blogs ever",
+  description: "Coolest blogs ever.",
 };
 
 export default function RootLayout({
